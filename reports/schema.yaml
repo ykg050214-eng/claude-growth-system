@@ -1,0 +1,95 @@
+# ============================================================
+# Claude 成長システム — 日次レポート スキーマ定義
+# Claude Codeが読んで自動実行できるアクション可能な形式
+# ============================================================
+
+# --- メタデータ ---
+date: "YYYY-MM-DD"                    # 分析日
+generated_at: "YYYY-MM-DDTHH:MM:SS"  # 生成日時
+scout_version: "1.0"
+
+# --- ソース動画一覧 ---
+source_videos:
+  - id: "vid_001"
+    title: "動画タイトル"
+    url: "https://www.youtube.com/watch?v=XXXXXXXX"
+    channel: "チャンネル名"
+    language: "ja"                    # ja / en
+    published_at: "YYYY-MM-DD"        # 推定公開日
+    category:                         # 複数可
+      - "latest_model"                # 最新モデル解説
+      - "usage_tips"                  # 使い方・活用術
+      - "news"                        # ニュース・最新情報
+    summary: "動画の概要（1〜2文）"
+    key_points:                       # 動画の要点（箇条書き）
+      - "ポイント1"
+      - "ポイント2"
+
+# --- 実行タスク一覧 ---
+# Claude Codeはここを読んで実際に実装します
+tasks:
+  - id: "task_001"                    # 一意ID（日付_連番）
+    source_video_id: "vid_001"        # 参照した動画ID
+    title: "タスクのタイトル（簡潔に）"
+    description: |
+      このタスクで何を実装するかの詳細説明。
+      Claude Codeがこれだけ読めば実装できるレベルで書く。
+
+    type: "code_generation"           # タスクタイプ（下記参照）
+    # code_generation     : Pythonスクリプト・Webアプリなどのコード実装
+    # prompt_technique    : プロンプトテクニック・テンプレート作成
+    # data_pipeline       : データ収集・変換・分析パイプライン
+    # workflow_automation : ファイル操作・定期タスク・自動化スクリプト
+
+    priority: "medium"                # high / medium / low
+    difficulty: "medium"              # easy / medium / hard
+    estimated_minutes: 30             # 推定実装時間（分）
+    dependencies: []                  # 先に完了が必要なtask IDリスト
+
+    # --- 実装仕様（Claude Codeへの具体的指示） ---
+    implementation:
+      language: "python"              # python / javascript / bash / markdown
+      output_dir: "projects/"         # 成果物の保存先
+      dependencies:                   # pip install / npm install するもの
+        - "anthropic"
+        - "requests"
+
+      steps:                          # 実装ステップ（順番通りに実行）
+        - "ステップ1: XXXを初期化する"
+        - "ステップ2: YYYを実装する"
+        - "ステップ3: ZZZでテストする"
+
+      sample_code: |
+        # 動画内で紹介されていたコードスニペット（あれば）
+        # Claude Codeはこれをベースに完全版を実装する
+        import anthropic
+        client = anthropic.Anthropic()
+        # ...
+
+      expected_output: "output.py"    # 期待する成果物ファイル名
+      test_command: "python output.py"  # 動作確認コマンド
+
+      notes: |
+        実装時の注意事項・ポイント・参考情報
+
+    # --- 実行状態（Claude Codeが更新する） ---
+    status: "pending"                 # pending / in_progress / completed / failed
+    completed_at: null
+    output_path: null
+    execution_notes: null
+
+# --- 本日のサマリー ---
+daily_summary:
+  total_videos: 5
+  total_tasks: 5
+  categories_covered:
+    - "latest_model"
+    - "usage_tips"
+    - "news"
+  highlight: "本日の最重要トピック（1文）"
+  models_mentioned:
+    - "Claude Opus 4.6"
+    - "Claude Code"
+  key_techniques:
+    - "学習したテクニック1"
+    - "学習したテクニック2"

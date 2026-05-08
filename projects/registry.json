@@ -1,0 +1,84 @@
+{
+  "_meta": {
+    "description": "Claude 自走型成長システム — タスク実装レジストリ",
+    "version": "1.0",
+    "created_at": "2026-05-08T00:00:00",
+    "last_updated": "2026-05-08T09:06:40"
+  },
+  "stats": {
+    "total_tasks": 5,
+    "completed": 5,
+    "in_progress": 0,
+    "pending": 0,
+    "failed": 0,
+    "total_projects": 4,
+    "total_prompts": 1
+  },
+  "tasks": [
+    {
+      "id": "task_001",
+      "report_date": "2026-05-08",
+      "title": "Claude API リサーチ自動化スクリプト",
+      "type": "code_generation",
+      "priority": "high",
+      "difficulty": "medium",
+      "status": "completed",
+      "source_video": "https://www.youtube.com/watch?v=6Nxp1t7-ch0",
+      "output_path": "projects/20260508_task001_research_bot/research_bot.py",
+      "completed_at": "2026-05-08T09:06:40",
+      "execution_notes": "デモモードで動作確認済み。ANTHROPIC_API_KEY設定後に本番稼働可能。"
+    },
+    {
+      "id": "task_002",
+      "report_date": "2026-05-08",
+      "title": "Claude Code 用プロジェクトテンプレート自動生成ツール",
+      "type": "code_generation",
+      "priority": "high",
+      "difficulty": "easy",
+      "status": "completed",
+      "source_video": "https://www.youtube.com/watch?v=zOtDiXqUkiI",
+      "output_path": "projects/20260508_task002_template_gen/template_gen.py",
+      "completed_at": "2026-05-08T09:05:01",
+      "execution_notes": "4種のプロジェクトタイプに対応。python-script/web-app/data-pipeline/api-integrationをテスト実行済み。"
+    },
+    {
+      "id": "task_003",
+      "report_date": "2026-05-08",
+      "title": "議事録自動生成プロンプトテンプレート集",
+      "type": "prompt_technique",
+      "priority": "medium",
+      "difficulty": "easy",
+      "status": "completed",
+      "source_video": "https://www.youtube.com/watch?v=O1nlQT8oJiQ",
+      "output_path": "prompts/20260508_business_templates.md",
+      "completed_at": "2026-05-08T09:05:01",
+      "execution_notes": "5種のビジネス文書プロンプトテンプレートを作成。変数置換形式で再利用可能。"
+    },
+    {
+      "id": "task_004",
+      "report_date": "2026-05-08",
+      "title": "Claude モデル選択ガイドスクリプト",
+      "type": "code_generation",
+      "priority": "medium",
+      "difficulty": "easy",
+      "status": "completed",
+      "source_video": "https://www.youtube.com/watch?v=mnsZYb5FMvY",
+      "output_path": "projects/20260508_task004_model_selector/model_selector.py",
+      "completed_at": "2026-05-08T09:05:01",
+      "execution_notes": "4モデル対応。対話モードと--listオプションで動作確認済み。"
+    },
+    {
+      "id": "task_005",
+      "report_date": "2026-05-08",
+      "title": "AIベンチマーク追跡ダッシュボード",
+      "type": "data_pipeline",
+      "priority": "low",
+      "difficulty": "easy",
+      "status": "completed",
+      "source_video": "https://www.youtube.com/watch?v=J03twdicazM",
+      "output_path": "projects/20260508_task005_benchmark_tracker/benchmark_tracker.py",
+      "completed_at": "2026-05-08T09:06:40",
+      "execution_notes": "6モデルの初期データ投入。benchmarks.mdの生成・list・add コマンドすべて動作確認済み。"
+    }
+  ]
+}

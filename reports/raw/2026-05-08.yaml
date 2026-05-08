@@ -1,0 +1,371 @@
+# ============================================================
+# Claude 成長システム — 日次レポート
+# 生成日: 2026-05-08 | Scout v1.0
+# ============================================================
+
+date: "2026-05-08"
+generated_at: "2026-05-08T09:00:00"
+scout_version: "1.0"
+
+source_videos:
+  - id: "vid_001"
+    title: "【2026年最新】世界No.1生成AI「Claude」とは？ChatGPTを超える実力と中小企業向け活用法を徹底解説！"
+    url: "https://www.youtube.com/watch?v=O1nlQT8oJiQ"
+    channel: "不明（要確認）"
+    language: "ja"
+    category: ["latest_model", "usage_tips"]
+    summary: "2026年時点のClaude全般を解説。ChatGPTとの差別化と中小企業向け実践活用法を紹介。"
+    key_points:
+      - "Claude はAnthropicのConstitutional AIで安全性が高い"
+      - "ChatGPTより長文・コンテキスト処理に強い"
+      - "中小企業での活用：議事録自動化・メール生成・データ分析"
+      - "API経由での自動化が費用対効果高い"
+
+  - id: "vid_002"
+    title: "【衝撃】最強のAIエージェント「Claude Code」の最新機能・使い方・プログラミングをAIで効率化する超実践術を解説!"
+    url: "https://www.youtube.com/watch?v=zOtDiXqUkiI"
+    channel: "不明（要確認）"
+    language: "ja"
+    category: ["usage_tips"]
+    summary: "Claude Codeを使ったプログラミング自動化の実践術。Webサイト・アプリ開発への応用を実演。"
+    key_points:
+      - "Claude Codeはターミナルから直接コードを生成・実行できる"
+      - "CLAUDE.mdでプロジェクトコンテキストを与えると精度が上がる"
+      - "複数ファイルの同時編集・リファクタリングが得意"
+      - "WebサイトをゼロからHTMLで生成する実演あり"
+      - "エラー自動修正ループで人手不要で動くコードを作れる"
+
+  - id: "vid_003"
+    title: "【2026年本命AIモデル】コーディング以外も鬼強化 Anthropicの最新AIモデル「Claude Opus 4.6」はリサーチ・スライド資料作成・小説執筆までできる！"
+    url: "https://www.youtube.com/watch?v=6Nxp1t7-ch0"
+    channel: "不明（要確認）"
+    language: "ja"
+    category: ["latest_model"]
+    summary: "Opus 4.6の1Mトークンコンテキストを活用したリサーチ・資料作成・創作機能を実演。"
+    key_points:
+      - "100万トークン（約750,000語）のコンテキストウィンドウ対応"
+      - "複数のPDFを一度に読み込んで横断リサーチが可能"
+      - "Webリサーチ→スライド構成→Markdown出力を一気通貫でできる"
+      - "小説執筆：長編のキャラクター一貫性を保てる"
+      - "Anthropic APIでmodel='claude-opus-4-6'を指定して使う"
+
+  - id: "vid_004"
+    title: "ついに発表、Anthropic Claudeの新モデル「Mythos（ミトス）」"
+    url: "https://www.youtube.com/watch?v=J03twdicazM"
+    channel: "不明（要確認）"
+    language: "ja"
+    category: ["news"]
+    summary: "Claude Mythosの正式発表。SWE-bench 93.9%達成。現時点では11組織への限定プレビューのみ。"
+    key_points:
+      - "SWE-bench Verified: 93.9%（前モデル比+15%）"
+      - "USAMO 2026数学オリンピック: 97.6%"
+      - "サイバーセキュリティ分野で11組織に限定提供"
+      - "一般公開は未定（Opus 4.7が現在の最強一般公開モデル）"
+      - "Opus 4.7（2026年4月16日リリース）が実際に使える最新版"
+
+  - id: "vid_005"
+    title: "【2026年春最新版】今年再注目のAI「Claudeシリーズ」完全ガイド｜Claude Code・Cowork・Opus 4.6…全ツールをまとめて解説！"
+    url: "https://www.youtube.com/watch?v=mnsZYb5FMvY"
+    channel: "不明（要確認）"
+    language: "ja"
+    category: ["latest_model", "news"]
+    summary: "2026年春のClaudeエコシステム全体像。Code/Cowork/Opus 4.6の使い分けを解説。"
+    key_points:
+      - "Claude.ai（Web）：一般ユーザー向け会話・創作"
+      - "Claude Code（CLI）：開発者向けコーディングエージェント"
+      - "Cowork：非開発者向けファイル・タスク自動化デスクトップツール"
+      - "Opus 4.6：API利用・大規模リサーチ向け最強モデル"
+      - "モデル選択基準：速度=Haiku/バランス=Sonnet/精度=Opus"
+
+# ============================================================
+# 実行タスク（Claude Codeが実装する）
+# ============================================================
+
+tasks:
+  - id: "task_001"
+    source_video_id: "vid_003"
+    title: "Claude API リサーチ自動化スクリプト"
+    description: |
+      Claude Opus 4.6の100万トークンコンテキストを活用して、
+      複数のテキストソースを一度に読み込み、横断的なリサーチレポートを
+      自動生成するPythonスクリプトを実装する。
+
+      入力：検索キーワード + 複数のテキストファイル（またはURL）
+      出力：Markdownフォーマットのリサーチレポート
+
+    type: "code_generation"
+    priority: "high"
+    difficulty: "medium"
+    estimated_minutes: 40
+    dependencies: []
+
+    implementation:
+      language: "python"
+      output_dir: "projects/20260508_task001_research_bot/"
+      dependencies:
+        - "anthropic>=0.40.0"
+        - "requests"
+        - "python-dotenv"
+
+      steps:
+        - "STEP1: anthropic クライアントを初期化（APIキーは.envから読む）"
+        - "STEP2: 入力テキストファイルを全て読み込んで結合する"
+        - "STEP3: システムプロンプトに「研究者」ペルソナを設定"
+        - "STEP4: claude-opus-4-6 モデルでリサーチレポートを生成"
+        - "STEP5: レポートをMarkdownファイルとして保存"
+        - "STEP6: コマンドライン引数でキーワードと入力ファイルを指定できるようにする"
+
+      sample_code: |
+        import anthropic
+        import argparse
+        from pathlib import Path
+
+        def research(keyword: str, input_files: list[str]) -> str:
+            client = anthropic.Anthropic()
+
+            # 全ファイルの内容を結合
+            combined_text = ""
+            for f in input_files:
+                combined_text += Path(f).read_text(encoding="utf-8") + "\n\n"
+
+            message = client.messages.create(
+                model="claude-opus-4-6",
+                max_tokens=4096,
+                system="あなたは優秀なリサーチアナリストです。提供された資料を横断的に分析し、構造化されたレポートを作成してください。",
+                messages=[{
+                    "role": "user",
+                    "content": f"キーワード: {keyword}\n\n資料:\n{combined_text}\n\n上記資料を分析し、{keyword}に関するリサーチレポートをMarkdown形式で作成してください。"
+                }]
+            )
+            return message.content[0].text
+
+        if __name__ == "__main__":
+            parser = argparse.ArgumentParser()
+            parser.add_argument("keyword")
+            parser.add_argument("files", nargs="+")
+            args = parser.parse_args()
+
+            result = research(args.keyword, args.files)
+            output = Path(f"report_{args.keyword}.md")
+            output.write_text(result)
+            print(f"レポート生成完了: {output}")
+
+      expected_output: "research_bot.py"
+      test_command: "python research_bot.py 'Claude AI' sample_input.txt"
+      notes: |
+        - ANTHROPIC_API_KEY を .env ファイルに設定が必要
+        - sample_input.txtも作成してテスト可能にする
+        - README.mdに使い方を必ず記載
+
+    status: "pending"
+    completed_at: null
+    output_path: null
+    execution_notes: null
+
+  - id: "task_002"
+    source_video_id: "vid_002"
+    title: "Claude Code 用プロジェクトテンプレート自動生成ツール"
+    description: |
+      Claude Codeが効率的に動くよう、プロジェクトの種類を指定すると
+      CLAUDE.md + フォルダ構成 + .gitignore を自動生成するツールを実装する。
+
+      対応プロジェクトタイプ：
+      - python-script（Pythonスクリプト）
+      - web-app（HTML/CSS/JS）
+      - data-pipeline（データパイプライン）
+      - api-integration（API連携）
+
+    type: "code_generation"
+    priority: "high"
+    difficulty: "easy"
+    estimated_minutes: 25
+    dependencies: []
+
+    implementation:
+      language: "python"
+      output_dir: "projects/20260508_task002_template_gen/"
+      dependencies: []
+
+      steps:
+        - "STEP1: プロジェクトタイプのテンプレート辞書を定義"
+        - "STEP2: 各タイプのCLAUDE.mdテンプレートを作成"
+        - "STEP3: フォルダ構成を自動作成する関数を実装"
+        - "STEP4: .gitignoreをタイプ別に生成"
+        - "STEP5: コマンドライン引数でタイプと出力先を指定"
+        - "STEP6: 生成結果のサマリーを表示"
+
+      sample_code: |
+        import os
+        import argparse
+        from pathlib import Path
+
+        TEMPLATES = {
+            "python-script": {
+                "dirs": ["src", "tests", "data", "logs"],
+                "claude_md": "# プロジェクト概要\n\n## 実行方法\npython src/main.py\n",
+            },
+            "web-app": {
+                "dirs": ["src", "public", "assets"],
+                "claude_md": "# Webアプリ\n\n## 構成\nindex.html をブラウザで開く\n",
+            }
+        }
+
+        def generate(project_type: str, output_dir: str):
+            path = Path(output_dir)
+            path.mkdir(parents=True, exist_ok=True)
+            template = TEMPLATES.get(project_type, TEMPLATES["python-script"])
+            for d in template["dirs"]:
+                (path / d).mkdir(exist_ok=True)
+            (path / "CLAUDE.md").write_text(template["claude_md"])
+            print(f"生成完了: {output_dir}")
+
+      expected_output: "template_gen.py"
+      test_command: "python template_gen.py python-script my_new_project"
+      notes: "生成されたフォルダ構造を表示するtreeコマンドも実装すると良い"
+
+    status: "pending"
+    completed_at: null
+    output_path: null
+    execution_notes: null
+
+  - id: "task_003"
+    source_video_id: "vid_001"
+    title: "議事録自動生成プロンプトテンプレート集"
+    description: |
+      動画で紹介された「中小企業でのClaude活用」から、
+      議事録・メール・報告書を自動生成するプロンプトテンプレートを
+      5種類作成し、実際にClaude APIで試してサンプル出力も記録する。
+
+    type: "prompt_technique"
+    priority: "medium"
+    difficulty: "easy"
+    estimated_minutes: 20
+    dependencies: []
+
+    implementation:
+      language: "markdown"
+      output_dir: "prompts/"
+      dependencies: []
+
+      steps:
+        - "STEP1: 議事録生成プロンプトテンプレートを作成"
+        - "STEP2: ビジネスメール生成プロンプトを作成"
+        - "STEP3: 週次報告書生成プロンプトを作成"
+        - "STEP4: 提案書アウトライン生成プロンプトを作成"
+        - "STEP5: 各テンプレートをClaude APIで実際に試してサンプル出力を記録"
+        - "STEP6: 使い方・効果をprompts/business_templates.mdにまとめる"
+
+      expected_output: "prompts/20260508_business_templates.md"
+      test_command: "cat prompts/20260508_business_templates.md"
+      notes: |
+        プロンプトには必ず以下を含める：
+        - 役割設定（system）
+        - 入力変数の説明（{会議名}など）
+        - 出力フォーマット指定
+        - 実際のサンプル出力
+
+    status: "pending"
+    completed_at: null
+    output_path: null
+    execution_notes: null
+
+  - id: "task_004"
+    source_video_id: "vid_005"
+    title: "Claude モデル選択ガイドスクリプト"
+    description: |
+      動画で解説された「モデル選択基準（速度=Haiku/バランス=Sonnet/精度=Opus）」を
+      元に、ユースケースを入力するとベストなモデルと設定を推薦するツールを実装する。
+
+      入力：タスクの種類・必要精度・レスポンス速度要件・コスト優先度
+      出力：推奨モデル・max_tokens・temperature設定・API呼び出しサンプル
+
+    type: "code_generation"
+    priority: "medium"
+    difficulty: "easy"
+    estimated_minutes: 20
+    dependencies: []
+
+    implementation:
+      language: "python"
+      output_dir: "projects/20260508_task004_model_selector/"
+      dependencies: []
+
+      steps:
+        - "STEP1: モデル情報辞書を定義（haiku/sonnet/opus各パラメータ）"
+        - "STEP2: ユースケース → モデルのマッピングロジックを実装"
+        - "STEP3: インタラクティブCLIで質問形式で入力を受け付ける"
+        - "STEP4: 推薦結果とAPIサンプルコードを出力"
+        - "STEP5: 結果をモデル比較表として表示"
+
+      expected_output: "model_selector.py"
+      test_command: "python model_selector.py"
+      notes: "2026年5月時点のモデル情報：claude-haiku-4-5 / claude-sonnet-4-6 / claude-opus-4-6"
+
+    status: "pending"
+    completed_at: null
+    output_path: null
+    execution_notes: null
+
+  - id: "task_005"
+    source_video_id: "vid_004"
+    title: "AIベンチマーク追跡ダッシュボード（Markdown）"
+    description: |
+      動画で紹介されたClaude Mythosのベンチマーク情報（SWE-bench, USAMO等）を
+      元に、主要AIモデルのベンチマーク比較表を作成・管理するMarkdownファイルと
+      更新スクリプトを実装する。
+
+      毎日新しいベンチマーク情報が出たら追記できる構造にする。
+
+    type: "data_pipeline"
+    priority: "low"
+    difficulty: "easy"
+    estimated_minutes: 15
+    dependencies: []
+
+    implementation:
+      language: "python"
+      output_dir: "projects/20260508_task005_benchmark_tracker/"
+      dependencies: []
+
+      steps:
+        - "STEP1: ベンチマークデータをJSONで管理する構造を設計"
+        - "STEP2: 初期データ（Mythos/Opus 4.7/Sonnet 4.6/GPT-4o等）を投入"
+        - "STEP3: JSONからMarkdown比較表を生成するスクリプトを実装"
+        - "STEP4: 新規モデル・ベンチマークを追加するCLIコマンドを実装"
+        - "STEP5: benchmarks.md を生成して内容を確認"
+
+      expected_output: "benchmark_tracker.py"
+      test_command: "python benchmark_tracker.py generate"
+      notes: |
+        初期ベンチマークデータ（2026年5月時点）:
+        - Claude Mythos: SWE-bench 93.9%, USAMO 97.6%（限定公開）
+        - Claude Opus 4.7: SWE-bench ~85%（一般公開中）
+        - Claude Opus 4.6: SWE-bench ~78%（一般公開中）
+        - GPT-4o: SWE-bench ~72%（参考値）
+
+    status: "pending"
+    completed_at: null
+    output_path: null
+    execution_notes: null
+
+# --- 本日サマリー ---
+daily_summary:
+  total_videos: 5
+  total_tasks: 5
+  categories_covered:
+    - "latest_model"
+    - "usage_tips"
+    - "news"
+  highlight: "Claude Opus 4.6の1Mコンテキストを活用したリサーチ自動化が本日の最重要実装テーマ"
+  models_mentioned:
+    - "Claude Opus 4.6"
+    - "Claude Opus 4.7"
+    - "Claude Code"
+    - "Claude Mythos（限定公開）"
+    - "claude-haiku-4-5"
+    - "claude-sonnet-4-6"
+  key_techniques:
+    - "100万トークンコンテキストを使った横断リサーチ"
+    - "CLAUDE.mdでClaude Codeの精度向上"
+    - "モデル選択基準（Haiku/Sonnet/Opus）"
+    - "ビジネス文書の自動生成プロンプト設計"

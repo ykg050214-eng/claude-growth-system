@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "updated": "2026-05-08",
+    "note": "2026年5月時点のデータ"
+  },
+  "models": [
+    {
+      "name": "Claude Mythos",
+      "org": "Anthropic",
+      "released": "2026-04（限定）",
+      "available": false,
+      "benchmarks": {
+        "SWE-bench Verified": 93.9,
+        "USAMO 2026": 97.6,
+        "HumanEval": 98.5,
+        "MMLU": 96.2
+      },
+      "notes": "11組織への限定プレビューのみ。一般公開未定。"
+    },
+    {
+      "name": "Claude Opus 4.7",
+      "org": "Anthropic",
+      "released": "2026-04-16",
+      "available": true,
+      "benchmarks": {
+        "SWE-bench Verified": 85.2,
+        "USAMO 2026": 89.4,
+        "HumanEval": 95.1,
+        "MMLU": 93.8
+      },
+      "notes": "現時点の一般公開最強モデル。"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "org": "Anthropic",
+      "released": "2026-02",
+      "available": true,
+      "benchmarks": {
+        "SWE-bench Verified": 78.3,
+        "USAMO 2026": 82.1,
+        "HumanEval": 92.4,
+        "MMLU": 91.5
+      },
+      "notes": "100万トークンコンテキスト対応。"
+    },
+    {
+      "name": "Claude Sonnet 4.6",
+      "org": "Anthropic",
+      "released": "2026-02-17",
+      "available": true,
+      "benchmarks": {
+        "SWE-bench Verified": 70.1,
+        "USAMO 2026": 74.0,
+        "HumanEval": 88.7,
+        "MMLU": 88.9
+      },
+      "notes": "バランス型。コスパ最優秀。"
+    },
+    {
+      "name": "GPT-4o",
+      "org": "OpenAI",
+      "released": "2024-05",
+      "available": true,
+      "benchmarks": {
+        "SWE-bench Verified": 72.0,
+        "USAMO 2026": 70.5,
+        "HumanEval": 90.2,
+        "MMLU": 88.7
+      },
+      "notes": "参考値（2026年5月時点）。"
+    },
+    {
+      "name": "Gemini 2.0 Ultra",
+      "org": "Google",
+      "released": "2025-12",
+      "available": true,
+      "benchmarks": {
+        "SWE-bench Verified": 68.4,
+        "USAMO 2026": 75.0,
+        "HumanEval": 87.5,
+        "MMLU": 90.1
+      },
+      "notes": "参考値（2026年5月時点）。"
+    }
+  ]
+}
